@@ -20,6 +20,14 @@ define('infosite/app', ['exports', 'infosite/resolver', 'ember-load-initializers
 
   exports.default = App;
 });
+define('infosite/components/article-card', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Component.extend({});
+});
 define('infosite/components/bs-accordion', ['exports', 'ember-bootstrap/components/bs-accordion'], function (exports, _bsAccordion) {
   'use strict';
 
@@ -1071,7 +1079,15 @@ define("infosite/templates/application", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "oXI405JE", "block": "{\"symbols\":[\"navbar\",\"nav\"],\"statements\":[[4,\"bs-navbar\",null,[[\"type\",\"fluid\",\"collapsed\",\"onCollapse\",\"onExpand\"],[[25,\"if\",[[19,0,[\"inverse\"]],\"inverse\"],null],[19,0,[\"fluid\"]],[19,0,[\"collapsed\"]],[25,\"action\",[[19,0,[]],[25,\"mut\",[[19,0,[\"collapsed\"]]],null],true],null],[25,\"action\",[[19,0,[]],[25,\"mut\",[[19,0,[\"collapsed\"]]],null],false],null]]],{\"statements\":[[0,\"  \"],[6,\"div\"],[9,\"class\",\"navbar-header\"],[7],[0,\"\\n    \"],[1,[19,1,[\"toggle\"]],false],[0,\"\\n    \"],[4,\"link-to\",[\"index\"],[[\"class\"],[\"navbar-brand\"]],{\"statements\":[[6,\"img\"],[9,\"src\",\"images/saxionlogo.png\"],[9,\"alt\",\"Saxion logo\"],[9,\"style\",\"height: 30px; display: inline; margin-top: -4px;\"],[7],[8],[0,\"HBO-ICT\"]],\"parameters\":[]},null],[0,\"\\n  \"],[8],[0,\"\\n\"],[4,\"component\",[[19,1,[\"content\"]]],null,{\"statements\":[[4,\"component\",[[19,1,[\"nav\"]]],null,{\"statements\":[[0,\"      \"],[4,\"component\",[[19,2,[\"item\"]]],null,{\"statements\":[[4,\"component\",[[19,2,[\"link-to\"]],\"index\"],null,{\"statements\":[[0,\"Home\"]],\"parameters\":[]},null]],\"parameters\":[]},null],[0,\"\\n\"]],\"parameters\":[2]},null]],\"parameters\":[]},null]],\"parameters\":[1]},null],[1,[18,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/application.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "u7uZInwm", "block": "{\"symbols\":[\"navbar\",\"nav\"],\"statements\":[[4,\"bs-navbar\",null,[[\"class\",\"type\",\"fluid\",\"collapsed\",\"onCollapse\",\"onExpand\"],[\"navbar-fixed-top\",[25,\"if\",[[19,0,[\"inverse\"]],\"inverse\"],null],[19,0,[\"fluid\"]],[19,0,[\"collapsed\"]],[25,\"action\",[[19,0,[]],[25,\"mut\",[[19,0,[\"collapsed\"]]],null],true],null],[25,\"action\",[[19,0,[]],[25,\"mut\",[[19,0,[\"collapsed\"]]],null],false],null]]],{\"statements\":[[0,\"  \"],[6,\"div\"],[9,\"class\",\"navbar-header\"],[7],[0,\"\\n    \"],[1,[19,1,[\"toggle\"]],false],[0,\"\\n    \"],[4,\"link-to\",[\"index\"],[[\"class\"],[\"navbar-brand\"]],{\"statements\":[[6,\"img\"],[9,\"src\",\"images/saxionlogo.png\"],[9,\"alt\",\"Saxion logo\"],[9,\"style\",\"height: 30px; display: inline; margin-top: -4px;\"],[7],[8],[0,\"HBO-ICT\"]],\"parameters\":[]},null],[0,\"\\n  \"],[8],[0,\"\\n\"],[4,\"component\",[[19,1,[\"content\"]]],null,{\"statements\":[[4,\"component\",[[19,1,[\"nav\"]]],null,{\"statements\":[[0,\"      \"],[4,\"component\",[[19,2,[\"item\"]]],null,{\"statements\":[[4,\"component\",[[19,2,[\"link-to\"]],\"index\"],null,{\"statements\":[[0,\"Home\"]],\"parameters\":[]},null]],\"parameters\":[]},null],[0,\"\\n\"]],\"parameters\":[2]},null]],\"parameters\":[]},null]],\"parameters\":[1]},null],[6,\"div\"],[9,\"class\",\"container-fluid\"],[7],[0,\"\\n  \"],[1,[18,\"outlet\"],false],[0,\"\\n\"],[8],[0,\"\\n\"],[6,\"div\"],[9,\"class\",\"footer container-fluid\"],[7],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"footer-text col-md-6 col-md-offset-3\"],[7],[0,\"\\n      Project 2017\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/application.hbs" } });
+});
+define("infosite/templates/components/article-card", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "mkHEQknY", "block": "{\"symbols\":[\"&default\"],\"statements\":[[6,\"div\"],[9,\"class\",\"card row\"],[7],[0,\"\\n\"],[4,\"if\",[[19,0,[\"image\"]]],null,{\"statements\":[[0,\"    \"],[6,\"img\"],[9,\"class\",\"card-img-top col-md-12\"],[10,\"src\",[26,[[18,\"image\"]]]],[9,\"alt\",\"Studenten\"],[7],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"  \"],[6,\"div\"],[9,\"class\",\"card-body col-md-offset-3 col-sm-offset-2 col-lg-6 col-sm-8\"],[7],[0,\"\\n\"],[4,\"if\",[[19,0,[\"title\"]]],null,{\"statements\":[[0,\"      \"],[6,\"h1\"],[9,\"class\",\"card-title\"],[7],[1,[18,\"title\"],false],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"    \"],[2,\" <p class=\\\"card-text\\\"></p> \"],[0,\"\\n    \"],[11,1],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/components/article-card.hbs" } });
 });
 define("infosite/templates/index", ["exports"], function (exports) {
   "use strict";
@@ -1079,7 +1095,7 @@ define("infosite/templates/index", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "OASxImeg", "block": "{\"symbols\":[],\"statements\":[[0,\"Home:\\nWelkom bij HBO-ICT. Op deze site kan je informatie vinden over de opleiding HBO-ICT.\\nOp deze pagina vind je de informatie over het oriënterende deel van de opleiding. Het eerste half jaar bestaat uit het verkennen van het ICT vak. Je zal dus aan hand van de informatie die je hier krijgt en projecten die je moet uitvoeren leren hoe breed het ICT vak daadwerkelijk is. Het eerste deel van het kwartiel zal dan ook voornamelijk bestaan uit theorie lessen en toetsen aan het eind van het kwartiel. Als je het eerste kwartiel doorstaan hebt kom je in het tweede kwartiel. Het tweede kwartiel zal voornamelijk bestaan uit het in de praktijk brengen van wat je in het eerste kwartiel hebt geleerd.\\nAls je beide kwartielen hebt doorstaan kun je een uitstroomrichting kiezen. De uitstroomrichtingen waar je uit kan kiezen zijn: IT Business, IT Service Management en Software Engineering.\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/index.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "c94pPfWs", "block": "{\"symbols\":[],\"statements\":[[4,\"article-card\",null,[[\"title\",\"image\"],[\"HBO-ICT\",\"images/studenten.jpg\"]],{\"statements\":[[0,\"  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n    Welkom bij HBO-ICT. Op deze site kan je informatie vinden over de opleiding HBO-ICT.\\n    Op deze pagina vind je de informatie over het oriënterende deel van de opleiding. Het eerste half jaar bestaat uit het verkennen van het ICT vak. Je zal dus aan hand van de informatie die je hier krijgt en projecten die je moet uitvoeren leren hoe breed het ICT vak daadwerkelijk is. Het eerste deel van het kwartiel zal dan ook voornamelijk bestaan uit theorie lessen en toetsen aan het eind van het kwartiel. Als je het eerste kwartiel doorstaan hebt kom je in het tweede kwartiel. Het tweede kwartiel zal voornamelijk bestaan uit het in de praktijk brengen van wat je in het eerste kwartiel hebt geleerd.\\n    Als je beide kwartielen hebt doorstaan kun je een uitstroomrichting kiezen. De uitstroomrichtingen waar je uit kan kiezen zijn: IT Business, IT Service Management en Software Engineering.\\n  \"],[8],[0,\"\\n  \"],[6,\"em\"],[7],[0,\"\\n    HBO-ICT: Techniek op zijn best\\n  \"],[8],[0,\"\\n\"]],\"parameters\":[]},null]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/index.hbs" } });
 });
 
 
@@ -1103,6 +1119,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("infosite/app")["default"].create({"name":"infosite","version":"0.0.0+42c82df6"});
+  require("infosite/app")["default"].create({"name":"infosite","version":"0.0.0+af22a624"});
 }
 //# sourceMappingURL=infosite.map

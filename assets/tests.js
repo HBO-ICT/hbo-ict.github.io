@@ -10,6 +10,11 @@ define('infosite/tests/app.lint-test', [], function () {
     assert.ok(true, 'app.js should pass ESLint\n\n');
   });
 
+  QUnit.test('components/article-card.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/article-card.js should pass ESLint\n\n');
+  });
+
   QUnit.test('resolver.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'resolver.js should pass ESLint\n\n');
@@ -103,6 +108,35 @@ define('infosite/tests/helpers/start-app', ['exports', 'infosite/app', 'infosite
     });
   }
 });
+define('infosite/tests/integration/components/article-card-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleForComponent)('article-card', 'Integration | Component | article card', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      "id": "dnRSa95E",
+      "block": "{\"symbols\":[],\"statements\":[[1,[18,\"article-card\"],false]],\"hasEval\":false}",
+      "meta": {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      "id": "kU87yJSr",
+      "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"article-card\",null,null,{\"statements\":[[0,\"      template block text\\n\"]],\"parameters\":[]},null],[0,\"  \"]],\"hasEval\":false}",
+      "meta": {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
 define('infosite/tests/test-helper', ['infosite/tests/helpers/resolver', 'ember-qunit', 'ember-cli-qunit'], function (_resolver, _emberQunit, _emberCliQunit) {
   'use strict';
 
@@ -132,6 +166,11 @@ define('infosite/tests/tests.lint-test', [], function () {
   QUnit.test('helpers/start-app.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'helpers/start-app.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('integration/components/article-card-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/article-card-test.js should pass ESLint\n\n');
   });
 
   QUnit.test('test-helper.js', function (assert) {
