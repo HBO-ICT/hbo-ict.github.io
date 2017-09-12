@@ -15,6 +15,11 @@ define('infosite/tests/app.lint-test', [], function () {
     assert.ok(true, 'components/article-card.js should pass ESLint\n\n');
   });
 
+  QUnit.test('components/compagny-card.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/compagny-card.js should pass ESLint\n\n');
+  });
+
   QUnit.test('resolver.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'resolver.js should pass ESLint\n\n');
@@ -25,9 +30,34 @@ define('infosite/tests/app.lint-test', [], function () {
     assert.ok(true, 'router.js should pass ESLint\n\n');
   });
 
+  QUnit.test('routes/business.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/business.js should pass ESLint\n\n');
+  });
+
   QUnit.test('routes/index.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/index.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('routes/service-management.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/service-management.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('routes/software.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/software.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('routes/werkveld/index.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/werkveld/index.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('routes/werkveld/moneybird.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/werkveld/moneybird.js should pass ESLint\n\n');
   });
 });
 define('infosite/tests/helpers/destroy-app', ['exports'], function (exports) {
@@ -137,6 +167,35 @@ define('infosite/tests/integration/components/article-card-test', ['ember-qunit'
     assert.equal(this.$().text().trim(), 'template block text');
   });
 });
+define('infosite/tests/integration/components/compagny-card-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleForComponent)('compagny-card', 'Integration | Component | compagny card', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      "id": "EbAatIAV",
+      "block": "{\"symbols\":[],\"statements\":[[1,[18,\"compagny-card\"],false]],\"hasEval\":false}",
+      "meta": {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      "id": "vMq3hVzg",
+      "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"compagny-card\",null,null,{\"statements\":[[0,\"      template block text\\n\"]],\"parameters\":[]},null],[0,\"  \"]],\"hasEval\":false}",
+      "meta": {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
 define('infosite/tests/test-helper', ['infosite/tests/helpers/resolver', 'ember-qunit', 'ember-cli-qunit'], function (_resolver, _emberQunit, _emberCliQunit) {
   'use strict';
 
@@ -173,20 +232,115 @@ define('infosite/tests/tests.lint-test', [], function () {
     assert.ok(true, 'integration/components/article-card-test.js should pass ESLint\n\n');
   });
 
+  QUnit.test('integration/components/compagny-card-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/compagny-card-test.js should pass ESLint\n\n');
+  });
+
   QUnit.test('test-helper.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'test-helper.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('unit/routes/business-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/business-test.js should pass ESLint\n\n');
   });
 
   QUnit.test('unit/routes/index-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/index-test.js should pass ESLint\n\n');
   });
+
+  QUnit.test('unit/routes/service-management-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/service-management-test.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('unit/routes/software-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/software-test.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('unit/routes/werkveld/index-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/werkveld/index-test.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('unit/routes/werkveld/moneybird-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/werkveld/moneybird-test.js should pass ESLint\n\n');
+  });
+});
+define('infosite/tests/unit/routes/business-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('route:business', 'Unit | Route | business', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
 });
 define('infosite/tests/unit/routes/index-test', ['ember-qunit'], function (_emberQunit) {
   'use strict';
 
   (0, _emberQunit.moduleFor)('route:index', 'Unit | Route | index', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('infosite/tests/unit/routes/service-management-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('route:service-management', 'Unit | Route | service management', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('infosite/tests/unit/routes/software-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('route:software', 'Unit | Route | software', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('infosite/tests/unit/routes/werkveld/index-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('route:werkveld/index', 'Unit | Route | werkveld/index', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('infosite/tests/unit/routes/werkveld/moneybird-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('route:werkveld/moneybird', 'Unit | Route | werkveld/moneybird', {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
   });

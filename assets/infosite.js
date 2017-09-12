@@ -769,6 +769,14 @@ define('infosite/components/bs-tooltip/element', ['exports', 'ember-bootstrap/co
     }
   });
 });
+define('infosite/components/compagny-card', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Component.extend({});
+});
 define('infosite/components/ember-wormhole', ['exports', 'ember-wormhole/components/ember-wormhole'], function (exports, _emberWormhole) {
   'use strict';
 
@@ -1048,11 +1056,58 @@ define('infosite/router', ['exports', 'infosite/config/environment'], function (
     rootURL: _environment.default.rootURL
   });
 
-  Router.map(function () {});
+  Router.map(function () {
+    this.route('software');
+    this.route('business');
+    this.route('service-management');
+    this.route('werkveld', function () {
+      this.route('moneybird');
+    });
+  });
 
   exports.default = Router;
 });
+define('infosite/routes/business', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Route.extend({});
+});
 define('infosite/routes/index', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Route.extend({});
+});
+define('infosite/routes/service-management', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Route.extend({});
+});
+define('infosite/routes/software', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Route.extend({});
+});
+define('infosite/routes/werkveld/index', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Route.extend({});
+});
+define('infosite/routes/werkveld/moneybird', ['exports'], function (exports) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -1079,7 +1134,15 @@ define("infosite/templates/application", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "u7uZInwm", "block": "{\"symbols\":[\"navbar\",\"nav\"],\"statements\":[[4,\"bs-navbar\",null,[[\"class\",\"type\",\"fluid\",\"collapsed\",\"onCollapse\",\"onExpand\"],[\"navbar-fixed-top\",[25,\"if\",[[19,0,[\"inverse\"]],\"inverse\"],null],[19,0,[\"fluid\"]],[19,0,[\"collapsed\"]],[25,\"action\",[[19,0,[]],[25,\"mut\",[[19,0,[\"collapsed\"]]],null],true],null],[25,\"action\",[[19,0,[]],[25,\"mut\",[[19,0,[\"collapsed\"]]],null],false],null]]],{\"statements\":[[0,\"  \"],[6,\"div\"],[9,\"class\",\"navbar-header\"],[7],[0,\"\\n    \"],[1,[19,1,[\"toggle\"]],false],[0,\"\\n    \"],[4,\"link-to\",[\"index\"],[[\"class\"],[\"navbar-brand\"]],{\"statements\":[[6,\"img\"],[9,\"src\",\"images/saxionlogo.png\"],[9,\"alt\",\"Saxion logo\"],[9,\"style\",\"height: 30px; display: inline; margin-top: -4px;\"],[7],[8],[0,\"HBO-ICT\"]],\"parameters\":[]},null],[0,\"\\n  \"],[8],[0,\"\\n\"],[4,\"component\",[[19,1,[\"content\"]]],null,{\"statements\":[[4,\"component\",[[19,1,[\"nav\"]]],null,{\"statements\":[[0,\"      \"],[4,\"component\",[[19,2,[\"item\"]]],null,{\"statements\":[[4,\"component\",[[19,2,[\"link-to\"]],\"index\"],null,{\"statements\":[[0,\"Home\"]],\"parameters\":[]},null]],\"parameters\":[]},null],[0,\"\\n\"]],\"parameters\":[2]},null]],\"parameters\":[]},null]],\"parameters\":[1]},null],[6,\"div\"],[9,\"class\",\"container-fluid\"],[7],[0,\"\\n  \"],[1,[18,\"outlet\"],false],[0,\"\\n\"],[8],[0,\"\\n\"],[6,\"div\"],[9,\"class\",\"footer container-fluid\"],[7],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"footer-text col-md-6 col-md-offset-3\"],[7],[0,\"\\n      Project 2017\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/application.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "bMhXRJLG", "block": "{\"symbols\":[\"navbar\",\"nav\"],\"statements\":[[4,\"bs-navbar\",null,[[\"class\",\"type\",\"fluid\",\"collapsed\",\"onCollapse\",\"onExpand\"],[\"navbar-fixed-top\",[25,\"if\",[[19,0,[\"inverse\"]],\"inverse\"],null],[19,0,[\"fluid\"]],[19,0,[\"collapsed\"]],[25,\"action\",[[19,0,[]],[25,\"mut\",[[19,0,[\"collapsed\"]]],null],true],null],[25,\"action\",[[19,0,[]],[25,\"mut\",[[19,0,[\"collapsed\"]]],null],false],null]]],{\"statements\":[[0,\"  \"],[6,\"div\"],[9,\"class\",\"navbar-header\"],[7],[0,\"\\n    \"],[1,[19,1,[\"toggle\"]],false],[0,\"\\n    \"],[4,\"link-to\",[\"index\"],[[\"class\"],[\"navbar-brand\"]],{\"statements\":[[6,\"img\"],[9,\"src\",\"/images/saxionLogo.png\"],[9,\"alt\",\"Saxion logo\"],[9,\"style\",\"height: 30px; display: inline; margin-top: -4px;\"],[7],[8],[0,\"HBO-ICT\"]],\"parameters\":[]},null],[0,\"\\n  \"],[8],[0,\"\\n\"],[4,\"component\",[[19,1,[\"content\"]]],null,{\"statements\":[[4,\"component\",[[19,1,[\"nav\"]]],null,{\"statements\":[[0,\"      \"],[4,\"component\",[[19,2,[\"item\"]]],null,{\"statements\":[[4,\"component\",[[19,2,[\"link-to\"]],\"index\"],null,{\"statements\":[[0,\"Home\"]],\"parameters\":[]},null]],\"parameters\":[]},null],[0,\"\\n      \"],[4,\"component\",[[19,2,[\"item\"]]],null,{\"statements\":[[4,\"component\",[[19,2,[\"link-to\"]],\"business\"],null,{\"statements\":[[0,\"Business\"]],\"parameters\":[]},null]],\"parameters\":[]},null],[0,\"\\n      \"],[4,\"component\",[[19,2,[\"item\"]]],null,{\"statements\":[[4,\"component\",[[19,2,[\"link-to\"]],\"service-management\"],null,{\"statements\":[[0,\"Service Management\"]],\"parameters\":[]},null]],\"parameters\":[]},null],[0,\"\\n      \"],[4,\"component\",[[19,2,[\"item\"]]],null,{\"statements\":[[4,\"component\",[[19,2,[\"link-to\"]],\"software\"],null,{\"statements\":[[0,\"Software\"]],\"parameters\":[]},null]],\"parameters\":[]},null],[0,\"\\n      \"],[4,\"component\",[[19,2,[\"item\"]]],null,{\"statements\":[[4,\"component\",[[19,2,[\"link-to\"]],\"werkveld\"],null,{\"statements\":[[0,\"Werkveld\"]],\"parameters\":[]},null]],\"parameters\":[]},null],[0,\"\\n\"]],\"parameters\":[2]},null]],\"parameters\":[]},null]],\"parameters\":[1]},null],[6,\"div\"],[9,\"class\",\"container-fluid\"],[7],[0,\"\\n  \"],[1,[18,\"outlet\"],false],[0,\"\\n\"],[8],[0,\"\\n\"],[6,\"div\"],[9,\"class\",\"footer container-fluid\"],[7],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"footer-text col-md-6 col-md-offset-3\"],[7],[0,\"\\n      \"],[6,\"p\"],[7],[0,\"\\n        Saxion HBO-ICT | Project Oriëntatie Studie en Beroep | 2017\"],[6,\"br\"],[7],[8],[0,\"\\n        Nick Schuitema - Niek Herbig - Ruben Smit\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/application.hbs" } });
+});
+define("infosite/templates/business", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "vJWs0C+G", "block": "{\"symbols\":[],\"statements\":[[4,\"article-card\",null,[[\"title\",\"image\"],[\"Business\",\"images/studenten.jpg\"]],{\"statements\":[[0,\"  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\nDe uitstroomrichting Business IT gaat met name over het vaststellen van de wensen van de klant met betrekking tot de IT.\\nDenk hierbij aan het vervangen van het huidige netwerk of de bestaande systemen.\\nHet is dan ook handig dat je goed met mensen overweg kan en goed kan luisteren naar de wensen van de klant.\\nNaast de verkoop van systemen/netwerken kan het ook zo zijn dat er van je wordt gevraagd om de bedrijfsprocessen bloot te leggen.\\nJe moet deze dan op een logische manier rangschikken zodat het systeem weer vlekkeloos kan werken.   \"],[8],[0,\"\\n\"]],\"parameters\":[]},null]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/business.hbs" } });
 });
 define("infosite/templates/components/article-card", ["exports"], function (exports) {
   "use strict";
@@ -1087,7 +1150,15 @@ define("infosite/templates/components/article-card", ["exports"], function (expo
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "mkHEQknY", "block": "{\"symbols\":[\"&default\"],\"statements\":[[6,\"div\"],[9,\"class\",\"card row\"],[7],[0,\"\\n\"],[4,\"if\",[[19,0,[\"image\"]]],null,{\"statements\":[[0,\"    \"],[6,\"img\"],[9,\"class\",\"card-img-top col-md-12\"],[10,\"src\",[26,[[18,\"image\"]]]],[9,\"alt\",\"Studenten\"],[7],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"  \"],[6,\"div\"],[9,\"class\",\"card-body col-md-offset-3 col-sm-offset-2 col-lg-6 col-sm-8\"],[7],[0,\"\\n\"],[4,\"if\",[[19,0,[\"title\"]]],null,{\"statements\":[[0,\"      \"],[6,\"h1\"],[9,\"class\",\"card-title\"],[7],[1,[18,\"title\"],false],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"    \"],[2,\" <p class=\\\"card-text\\\"></p> \"],[0,\"\\n    \"],[11,1],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/components/article-card.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "Y9tHT9JU", "block": "{\"symbols\":[\"&default\"],\"statements\":[[6,\"div\"],[9,\"class\",\"card article-card row\"],[7],[0,\"\\n\"],[4,\"if\",[[19,0,[\"image\"]]],null,{\"statements\":[[0,\"    \"],[6,\"img\"],[9,\"class\",\"card-img-top col-md-12\"],[10,\"src\",[26,[[18,\"image\"]]]],[10,\"alt\",[26,[[18,\"title\"]]]],[7],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"  \"],[6,\"div\"],[9,\"class\",\"card-body col-lg-offset-3 col-sm-offset-2 col-lg-6 col-sm-8\"],[7],[0,\"\\n\"],[4,\"if\",[[19,0,[\"title\"]]],null,{\"statements\":[[0,\"      \"],[6,\"h1\"],[9,\"class\",\"card-title\"],[7],[1,[18,\"title\"],false],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"    \"],[2,\" <p class=\\\"card-text\\\"></p> \"],[0,\"\\n    \"],[11,1],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/components/article-card.hbs" } });
+});
+define("infosite/templates/components/compagny-card", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "o1Zm+wIs", "block": "{\"symbols\":[\"&default\"],\"statements\":[[6,\"div\"],[9,\"class\",\"card compagny-card col-sm-6\"],[7],[0,\"\\n  \"],[6,\"img\"],[9,\"class\",\"card-img-top\"],[10,\"src\",[26,[[18,\"image\"]]]],[10,\"alt\",[26,[[18,\"title\"]]]],[7],[8],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"card-body\"],[7],[0,\"\\n    \"],[6,\"h4\"],[9,\"class\",\"card-title\"],[7],[1,[18,\"title\"],false],[8],[0,\"\\n    \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n      \"],[11,1],[0,\"\\n    \"],[8],[0,\"\\n    \"],[4,\"link-to\",[[19,0,[\"link\"]]],[[\"class\"],[\"btn btn-primary\"]],{\"statements\":[[0,\"Lees meer over \"],[1,[18,\"title\"],false]],\"parameters\":[]},null],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/components/compagny-card.hbs" } });
 });
 define("infosite/templates/index", ["exports"], function (exports) {
   "use strict";
@@ -1096,6 +1167,38 @@ define("infosite/templates/index", ["exports"], function (exports) {
     value: true
   });
   exports.default = Ember.HTMLBars.template({ "id": "c94pPfWs", "block": "{\"symbols\":[],\"statements\":[[4,\"article-card\",null,[[\"title\",\"image\"],[\"HBO-ICT\",\"images/studenten.jpg\"]],{\"statements\":[[0,\"  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n    Welkom bij HBO-ICT. Op deze site kan je informatie vinden over de opleiding HBO-ICT.\\n    Op deze pagina vind je de informatie over het oriënterende deel van de opleiding. Het eerste half jaar bestaat uit het verkennen van het ICT vak. Je zal dus aan hand van de informatie die je hier krijgt en projecten die je moet uitvoeren leren hoe breed het ICT vak daadwerkelijk is. Het eerste deel van het kwartiel zal dan ook voornamelijk bestaan uit theorie lessen en toetsen aan het eind van het kwartiel. Als je het eerste kwartiel doorstaan hebt kom je in het tweede kwartiel. Het tweede kwartiel zal voornamelijk bestaan uit het in de praktijk brengen van wat je in het eerste kwartiel hebt geleerd.\\n    Als je beide kwartielen hebt doorstaan kun je een uitstroomrichting kiezen. De uitstroomrichtingen waar je uit kan kiezen zijn: IT Business, IT Service Management en Software Engineering.\\n  \"],[8],[0,\"\\n  \"],[6,\"em\"],[7],[0,\"\\n    HBO-ICT: Techniek op zijn best\\n  \"],[8],[0,\"\\n\"]],\"parameters\":[]},null]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/index.hbs" } });
+});
+define("infosite/templates/service-management", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "cVENsUVT", "block": "{\"symbols\":[],\"statements\":[[4,\"article-card\",null,[[\"title\",\"image\"],[\"Service Management\",\"images/studenten.jpg\"]],{\"statements\":[[0,\"  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n    IT service management is de uitstroomrichting die zich vooral focust op het helpen ontwerpen/bouwen van een netwerksysteem.\\n    Bij het denken aan het helpen bouwen gaat het dan ook niet alleen maar over het opzetten van het systeem,\\n    maar dit kan ook inhouden dat je de leiding neemt over een team en deze sturing biedt over hoe het opgezet moet worden.\\n    Met deze reden is klantcontact dan ook een belangrijk onderdeel. \\n  \"],[8],[0,\"\\n\"]],\"parameters\":[]},null]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/service-management.hbs" } });
+});
+define("infosite/templates/software", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "McYDBAWQ", "block": "{\"symbols\":[],\"statements\":[[4,\"article-card\",null,[[\"title\",\"image\"],[\"Software\",\"images/studenten.jpg\"]],{\"statements\":[[0,\"  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n    De uitstroomrichting Software Engineering focust zicht bijna volledig op het ontwikkelen van software, van het idee tot de realisatie. Hier leer je verschillende vaardigheden en ga je dieper in op vakken zoals programmeren en zal je onder andere programmeertalen leren zoals Java en C++. Tevens moet je goed oog hebben op de onderliggende processen om jouw programma’s goed te laten inspelen op de wensen van de klant.\\n  \"],[8],[0,\"\\n\"]],\"parameters\":[]},null]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/software.hbs" } });
+});
+define("infosite/templates/werkveld/index", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "oJWLDNfZ", "block": "{\"symbols\":[],\"statements\":[[4,\"article-card\",null,[[\"title\",\"image\"],[\"Werkveld\",\"images/studenten.jpg\"]],{\"statements\":[[0,\"  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n    Dit is een stuk over het werkveld\\n  \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"col-lg-offset-3 col-sm-offset-2 col-lg-6 col-sm-8\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"row\"],[7],[0,\"\\n\"],[4,\"compagny-card\",null,[[\"title\",\"image\",\"link\"],[\"Moneybird\",\"images/moneybirdLogo.png\",\"werkveld.moneybird\"]],{\"statements\":[[0,\"        Lorem ipsum\\n\"]],\"parameters\":[]},null],[0,\"    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/werkveld/index.hbs" } });
+});
+define("infosite/templates/werkveld/moneybird", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "pMlchiqB", "block": "{\"symbols\":[],\"statements\":[[4,\"article-card\",null,[[\"title\",\"image\"],[\"Moneybird\",\"../images/moneybirdLogo.png\"]],{\"statements\":[[0,\"  \"],[6,\"p\"],[9,\"class\",\"card-text text-intro\"],[7],[0,\"\\n    \"],[6,\"img\"],[9,\"class\",\"img-inline\"],[9,\"src\",\"../images/moneybirdElianKrosse.jpg\"],[9,\"alt\",\"Elian Krosse\"],[7],[8],[0,\"\\n    Elian Krosse Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a condimentum urna. Curabitur convallis, tortor eget gravida tempor, dolor tortor ullamcorper felis, et consequat urna ante eget sem. Morbi molestie augue ut augue placerat dignissim. Phasellus in orci vel turpis elementum congue id vel turpis. Cras ac ultrices ligula. Donec sagittis libero id leo tincidunt, in viverra urna tincidunt. Nullam malesuada tempus metus consectetur dignissim. Sed non eros vel lorem elementum congue.\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n    Proin viverra luctus justo, in rhoncus odio aliquam eget. Nunc vehicula aliquam sagittis. Maecenas rutrum at nibh eget sollicitudin. Donec facilisis dignissim lacus, quis mollis mauris finibus in. Etiam sit amet leo eu augue dapibus aliquet in eu tortor. Vestibulum mattis congue nibh, non consequat mauris feugiat nec. Maecenas ac aliquam dui.\\n  \"],[8],[0,\"\\n  \"],[6,\"h3\"],[7],[0,\"Titel\"],[8],[0,\"\\n  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n    In hac habitasse platea dictumst. Pellentesque ut massa porta, maximus mauris in, iaculis leo. Duis hendrerit urna eget arcu aliquam, a suscipit turpis congue. Nulla varius volutpat rutrum. Sed eget interdum lacus. Praesent suscipit, risus quis imperdiet consectetur, quam sem elementum velit, sed lacinia magna neque in quam. Maecenas vitae ultrices dui. Pellentesque ultricies eleifend condimentum. Vestibulum fermentum neque quis mauris auctor venenatis. Sed semper orci at faucibus facilisis.\\n  \"],[8],[0,\"\\n  \"],[6,\"h5\"],[7],[0,\"Vraag\"],[8],[0,\"\\n  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n    Maecenas sit amet ornare tortor. Quisque feugiat sit amet lorem ac lobortis. Proin quis enim id urna cursus hendrerit vel nec sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut eu gravida neque. Mauris scelerisque sit amet neque nec sodales. Aenean placerat tortor vel aliquet gravida. Aenean ut odio gravida, pellentesque purus id, varius mi. Nunc non ex ac mauris vehicula ornare at nec felis. Sed varius augue sed feugiat mattis. Sed sit amet metus sapien. Morbi tristique eget nisl et maximus. Proin porttitor rhoncus euismod.\\n  \"],[8],[0,\"\\n  \"],[6,\"em\"],[7],[0,\"Cras egestas congue libero, vitae tempus magna.\"],[8],[0,\"\\n  \"],[6,\"p\"],[9,\"class\",\"card-text\"],[7],[0,\"\\n    Sed vestibulum lacus non mollis porta. Quisque efficitur pretium nisl, non dapibus lacus commodo ac. Ut mattis urna quis libero pharetra, vitae consequat leo euismod. Fusce vel dui nibh. Maecenas blandit, leo in consequat interdum, tortor purus gravida sapien, ut feugiat urna nisl imperdiet ante. In et pulvinar lorem. Sed vel eros ipsum.\\n  \"],[8],[0,\"\\n\"]],\"parameters\":[]},null]],\"hasEval\":false}", "meta": { "moduleName": "infosite/templates/werkveld/moneybird.hbs" } });
 });
 
 
@@ -1119,6 +1222,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("infosite/app")["default"].create({"name":"infosite","version":"0.0.0+af22a624"});
+  require("infosite/app")["default"].create({"name":"infosite","version":"0.0.0+d40dc6bf"});
 }
 //# sourceMappingURL=infosite.map
