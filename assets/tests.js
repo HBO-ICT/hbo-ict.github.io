@@ -50,6 +50,11 @@ define('infosite/tests/app.lint-test', [], function () {
     assert.ok(true, 'routes/software.js should pass ESLint\n\n');
   });
 
+  QUnit.test('routes/werkveld/denko-ict.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/werkveld/denko-ict.js should pass ESLint\n\n');
+  });
+
   QUnit.test('routes/werkveld/index.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/werkveld/index.js should pass ESLint\n\n');
@@ -58,6 +63,16 @@ define('infosite/tests/app.lint-test', [], function () {
   QUnit.test('routes/werkveld/moneybird.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/werkveld/moneybird.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('routes/werkveld/switch.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/werkveld/switch.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('routes/werkveld/thales.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/werkveld/thales.js should pass ESLint\n\n');
   });
 });
 define('infosite/tests/helpers/destroy-app', ['exports'], function (exports) {
@@ -262,6 +277,11 @@ define('infosite/tests/tests.lint-test', [], function () {
     assert.ok(true, 'unit/routes/software-test.js should pass ESLint\n\n');
   });
 
+  QUnit.test('unit/routes/werkveld/denko-ict-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/werkveld/denko-ict-test.js should pass ESLint\n\n');
+  });
+
   QUnit.test('unit/routes/werkveld/index-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/werkveld/index-test.js should pass ESLint\n\n');
@@ -270,6 +290,16 @@ define('infosite/tests/tests.lint-test', [], function () {
   QUnit.test('unit/routes/werkveld/moneybird-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/werkveld/moneybird-test.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('unit/routes/werkveld/switch-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/werkveld/switch-test.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('unit/routes/werkveld/thales-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/werkveld/thales-test.js should pass ESLint\n\n');
   });
 });
 define('infosite/tests/unit/routes/business-test', ['ember-qunit'], function (_emberQunit) {
@@ -324,6 +354,19 @@ define('infosite/tests/unit/routes/software-test', ['ember-qunit'], function (_e
     assert.ok(route);
   });
 });
+define('infosite/tests/unit/routes/werkveld/denko-ict-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('route:werkveld/denko-ict', 'Unit | Route | werkveld/denko ict', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
 define('infosite/tests/unit/routes/werkveld/index-test', ['ember-qunit'], function (_emberQunit) {
   'use strict';
 
@@ -341,6 +384,32 @@ define('infosite/tests/unit/routes/werkveld/moneybird-test', ['ember-qunit'], fu
   'use strict';
 
   (0, _emberQunit.moduleFor)('route:werkveld/moneybird', 'Unit | Route | werkveld/moneybird', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('infosite/tests/unit/routes/werkveld/switch-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('route:werkveld/switch', 'Unit | Route | werkveld/switch', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('infosite/tests/unit/routes/werkveld/thales-test', ['ember-qunit'], function (_emberQunit) {
+  'use strict';
+
+  (0, _emberQunit.moduleFor)('route:werkveld/thales', 'Unit | Route | werkveld/thales', {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
   });
