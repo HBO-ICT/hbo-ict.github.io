@@ -65,9 +65,9 @@ define('infosite/tests/app.lint-test', [], function () {
     assert.ok(true, 'routes/werkveld/moneybird.js should pass ESLint\n\n');
   });
 
-  QUnit.test('routes/werkveld/switch.js', function (assert) {
+  QUnit.test('routes/werkveld/previder.js', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'routes/werkveld/switch.js should pass ESLint\n\n');
+    assert.ok(true, 'routes/werkveld/previder.js should pass ESLint\n\n');
   });
 
   QUnit.test('routes/werkveld/thales.js', function (assert) {
@@ -292,9 +292,9 @@ define('infosite/tests/tests.lint-test', [], function () {
     assert.ok(true, 'unit/routes/werkveld/moneybird-test.js should pass ESLint\n\n');
   });
 
-  QUnit.test('unit/routes/werkveld/switch-test.js', function (assert) {
+  QUnit.test('unit/routes/werkveld/previder-test.js', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'unit/routes/werkveld/switch-test.js should pass ESLint\n\n');
+    assert.ok(true, 'unit/routes/werkveld/previder-test.js should pass ESLint\n\n');
   });
 
   QUnit.test('unit/routes/werkveld/thales-test.js', function (assert) {
@@ -393,10 +393,10 @@ define('infosite/tests/unit/routes/werkveld/moneybird-test', ['ember-qunit'], fu
     assert.ok(route);
   });
 });
-define('infosite/tests/unit/routes/werkveld/switch-test', ['ember-qunit'], function (_emberQunit) {
+define('infosite/tests/unit/routes/werkveld/previder-test', ['ember-qunit'], function (_emberQunit) {
   'use strict';
 
-  (0, _emberQunit.moduleFor)('route:werkveld/switch', 'Unit | Route | werkveld/switch', {
+  (0, _emberQunit.moduleFor)('route:werkveld/previder', 'Unit | Route | werkveld/previder', {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
   });

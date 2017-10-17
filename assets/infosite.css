@@ -11,7 +11,11 @@ h5 {
 .card-title {
   border-bottom: solid 5px #a6ce39;
 }
-
+.title-video {
+  color: #FFFFFF;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
 .article-card .card {
   margin-top: 50px;
 }
@@ -26,6 +30,22 @@ h5 {
   height: 50vh;
   object-fit: cover;
   padding: 0;
+}
+.article-card .card-video-top {
+  display: block;
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  padding: 0;
+}
+.article-card .card-video-container {
+  overflow: hidden;
+}
+.article-card .gradient-overlay {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  background: linear-gradient(to bottom,transparent 50%,rgba(0, 0, 0, 0.25) 100%);
 }
 .article-card .img-inline-right {
   width: 25%;
@@ -115,6 +135,10 @@ em {
   text-align: center;
 }
 
+.table > thead > tr > th {
+    border-bottom: 2px solid #a6ce39;
+}
+
 @media screen and (max-width: 768px) {
   .article-card .img-inline-right {
     margin-right: 0;
@@ -122,5 +146,11 @@ em {
   }
   .article-card .text-intro {
     overflow: auto;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .article-card .gradient-overlay {
+    margin-top: -50vh;
   }
 }
